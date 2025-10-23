@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -6,6 +8,10 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ title }: NavbarProps) => {
+  const pathname = usePathname();
+
+  const isLoginPage = pathname === "/login";
+
   return (
     <nav className={styles.navbar}>
       <h1 className={styles.h1}>
@@ -20,12 +26,15 @@ export const Navbar = ({ title }: NavbarProps) => {
         </span>
         {title}
       </h1>
-      <ul className={styles.ul}>
-        <li className={styles.li}>Links</li> {/* go to desktop design page */}
-        <li className={styles.li}>Profile Details</li>{" "}
-        {/* go to profile details page */}
-        <li className={styles.link}>Preview</li> {/* go to preview page */}
-      </ul>
+
+      {/* Render links only if not on login page */}
+      {!isLoginPage && (
+        <ul className={styles.ul}>
+          <li className={styles.li}>Links</li>
+          <li className={styles.li}>Profile Details</li>
+          <li className={styles.link}>Preview</li>
+        </ul>
+      )}
     </nav>
   );
 };
