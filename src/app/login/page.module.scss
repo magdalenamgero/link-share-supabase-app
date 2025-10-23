@@ -1,14 +1,14 @@
-.form-container {
+.formContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80dvh;
+  height: 80vh;
+  flex-direction: column;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -16,22 +16,38 @@
   border: 0.8px solid var(--logo-text);
   border-radius: 10px;
   padding: 2rem;
-  background-color: #d4cdde;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);
-  height: fit-content;
+  background-image: linear-gradient(-225deg, #d4cdde 0%, #ffe6fa 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-.label {
-  display: flex;
-  margin: 10px 0;
-  font-weight: italic;
-  font-size: 1rem;
+.h1 {
+  margin-bottom: 1rem;
+  font-family: var(--font);
+  font-size: x-large;
+  font-weight: 500;
+  width: 300px;
+  align-self: center;
+  text-align: center;
   color: var(--logo-text);
-  align-items: flex-start;
-  width: 100%;
+}
+
+.h2 {
+  margin-bottom: 10px;
+  font-family: var(--font);
+  font-size: large;
+  font-weight: 500;
+  width: 300px;
+  align-self: center;
+  text-align: center;
+  color: var(--logo-text);
+  opacity: 0.6;
 }
 
 .input {
+  margin: 5px 0 15px;
   flex: 1;
   border: 1px solid #949292;
   border-radius: 5px;
@@ -43,12 +59,11 @@
   background-color: #f0f0f0;
 }
 
-.button-container {
+.buttonContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  gap: 1rem;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .button {
@@ -61,6 +76,7 @@
   box-shadow: 5px 5px 5px rgb(0 0 0 / 5%);
   min-width: 85px;
   font-size: medium;
+  margin: 5px 10px;
 }
 
 .button:hover {

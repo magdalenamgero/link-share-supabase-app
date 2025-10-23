@@ -7,25 +7,25 @@ export default function LoginPage() {
     <>
       <Navbar title="DevLink" />
       <section className={styles.formContainer}>
+        <h1 className={styles.h1}>Hello There!</h1>
+        <h2 className={styles.h2}>
+          Let&apos;s sign you in, or create your account.
+        </h2>
         <form className={styles.form}>
-          <label className={styles.label} htmlFor="email">
-            email:
-          </label>
           <input
             className={styles.input}
             id="email"
             name="email"
             type="email"
+            placeholder="email"
             required
           />
-          <label className={styles.label} htmlFor="password">
-            password:
-          </label>
           <input
             className={styles.input}
             id="password"
             name="password"
             type="password"
+            placeholder="password"
             required
           />
           <div className={styles.buttonContainer}>
