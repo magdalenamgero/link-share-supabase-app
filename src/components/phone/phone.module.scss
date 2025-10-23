@@ -1,0 +1,11 @@
+.phoneContainer {
+  width: 375px;
+  height: 667px;
+  border: 16px black solid;
+  border-radius: 36px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  overflow-y: auto;
+}

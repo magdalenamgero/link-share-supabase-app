@@ -1,0 +1,45 @@
+@mixin generate-span-classes($prefix, $property, $range) {
+  @for $i from 1 through $range {
+    .#{$prefix}-#{$i} {
+      #{$property}: span $i;
+    }
+  }
+}
+
+@mixin generate-media-query-span-classes(
+  $prefix,
+  $property,
+  $range,
+  $breakpoint
+) {
+  @for $i from 1 through $range {
+    .#{$prefix}-#{$i} {
+      @media (width < $breakpoint) {
+        #{$property}: span $i;
+      }
+    }
+  }
+}
+
+@mixin generate-start-classes($prefix, $property, $range) {
+  @for $i from 1 through $range {
+    .#{$prefix}-#{$i} {
+      #{$property}: $i;
+    }
+  }
+}
+
+@mixin generate-media-query-start-classes(
+  $prefix,
+  $property,
+  $range,
+  $breakpoint
+) {
+  @for $i from 1 through $range {
+    .#{$prefix}-#{$i} {
+      @media (width < $breakpoint) {
+        #{$property}: $i;
+      }
+    }
+  }
+}
