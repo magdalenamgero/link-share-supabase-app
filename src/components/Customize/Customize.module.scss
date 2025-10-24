@@ -1,0 +1,33 @@
+.customizeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  background-color: #e0e0e0;
+  width: 60dvw;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
