@@ -1,7 +1,7 @@
 // create small component as a phone screen, to be a placeholder for the links and info the user inputs intot he customize component
 import React from "react";
 import styles from "./Phone.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface PhoneProps {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ interface PhoneProps {
 
 export const Phone = ({
   children,
-  profileImageUrl,
+  // profileImageUrl,
   name,
   email,
   links,

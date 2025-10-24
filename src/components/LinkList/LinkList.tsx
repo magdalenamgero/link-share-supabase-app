@@ -22,6 +22,7 @@ export function LinkList({ links, platform }: LinkListProps) {
           className={styles.link}
         >
           {link.url}
+          {platform ? ` (${platform})` : ""}
         </a>
       ))}
     </div>

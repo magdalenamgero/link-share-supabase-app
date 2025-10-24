@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Customize } from "@/components/Customize/Customize";
+import { Navbar } from "@/components/navbar/Navbar";
+import { Customize } from "@/components/customize/Customize";
 import styles from "./page.module.scss";
-import { LinkList } from "@/components/LinkList/LinkList";
-import { Phone } from "@/components/Phone/Phone";
+import { LinkList } from "@/components/linkList/LinkList";
+import { Phone } from "@/components/phone/Phone";
 
 const links = [
   { id: "1", url: "https://example.com/link1" },
@@ -13,10 +13,10 @@ const links = [
 ];
 
 export default async function Home() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const {
     data: { user },
-  } = await (await supabase).auth.getUser();
+  } = await supabase.auth.getUser();
 
   if (!user) {
     redirect("/login");

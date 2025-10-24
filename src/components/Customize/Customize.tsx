@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Customize.module.scss";
-import { AddLink } from "../AddLink/AddLink";
+import { AddLink } from "../addLink/AddLink";
 
 interface Link {
   id: string;
