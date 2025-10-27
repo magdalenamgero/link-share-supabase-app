@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import styles from "./Customize.module.scss";
-import { AddLink } from "../addLink/AddLink";
+import { AddLink } from "@/components/addLink/AddLink";
+import React from "react";
 
 interface Link {
   id: string;
@@ -25,10 +26,10 @@ export function Customize() {
   return (
     <div className={styles.customizeContainer}>
       <h1 className={styles.title}>Title</h1>
-
+      <button className={styles.addNewLink}>Add Link</button>
       <div className={styles.linksContainer}>
         {links.map((link) => (
-          <>
+          <React.Fragment key={link.id}>
             <input
               type="text"
               value={link.url}
@@ -38,7 +39,7 @@ export function Customize() {
             />
             <AddLink
               key={link.id}
-              onAddLink={(newLink) => handleAddLink(link.id, newLink)}
+              onAddLink={(newLink: Link) => handleAddLink(link.id, newLink)}
             />
             <select
               className={styles.platformDropdown}
@@ -57,11 +58,10 @@ export function Customize() {
               <option value="instagram">Instagram</option>
               <option value="other">Other</option>
             </select>
-          </>
+          </React.Fragment>
         ))}
+        <button className={styles.addButton}>Save</button>
       </div>
-
-      <button className={styles.addButton}>Save</button>
     </div>
   );
 }

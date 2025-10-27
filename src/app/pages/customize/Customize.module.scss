@@ -1,0 +1,59 @@
+.customizeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  background-color: #e0e0e0;
+  width: 60dvw;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.addNewLink {
+  border: 1px solid #949393;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgb(248 242 252);
+  font-size: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.addButton {
+  border: 1px solid #949393;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgb(248 242 252);
+  font-size: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: last baseline;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 1000px;
+  margin: 20px;
+}
+
+.platformDropdown {
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #949393;
+  background-color: rgb(248 242 252);
+  width: fit-content;
+}

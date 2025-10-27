@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
 import { Navbar } from "@/components/navbar/Navbar";
-import { Customize } from "@/components/customize/Customize";
 import styles from "./page.module.scss";
 import { LinkList } from "@/components/linkList/LinkList";
 import { Phone } from "@/components/phone/Phone";
+import { Customize } from "./pages/customize/Customize";
 
 const links = [
   { id: "1", url: "https://example.com/link1" },
